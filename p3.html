@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <title>Mining books for information</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"> --> -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <div class="section-blog-post">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="post-container">
+                        <a class="back" href="./index.html">Back to all posts</a>
+
+                        <h1><strong>Mining books for information</h1></strong>
+
+                        <span class="by">Posted by <strong>Balaganesh</strong> on <strong>March, 2020</strong></span>
+
+                        <div class="featured-image">
+                            <img src="https://www.youngisthan.in/wp-content/uploads/2018/11/title-pic-4-970x546.jpg"
+                                width="50%" , class="center_large">
+                        </div>
+                        <span style="display:block; height: 25px;"></span>
+                        <div class="post-body">
+                            <p>
+                                Extremely long and complex books has always interested me. Like Game of Thrones/A song of ice and fire, I wonder how the author keeps tab on
+                                100's of characters involved in arduously intricate storylines. One of those story lines is the Mahabharata, an ancient Indian
+                                epic involving a convoluted story of two families. The original iteration was written in sanskrit as far back as 9th century B.C. It was later translated to 
+                                English between 1883-1886. The original size of the text is roughly ten times larger than the Greek epics odyssey and iliad combined. Such a large
+                                corupus would be a golden playground to find interesting information and that is what I set out to do. This project is a part time activity for learning and 
+                                also for fun purpose. Let's dive in and take a look at the dimensions of the corpus.
+
+                            </p>
+                            <img src="images\TM\corpus.png" width="25%" , class="center_small">
+                            <span style="display:block; height: 25px;"></span>
+                            <p>
+                                I wanted to find few of the important things from the books. One has to keep in mind that I have not read the corpus previously.
+                                All information I find are new to me as well. Lets's take a look at the the key points I want to mine,
+                                <ul>
+                                    <li>Find who are the main protagonists of the story!</li>
+                                    <li>Find their description or how they are viewed in the literature!</li>
+                                    <li>What’s the general sentiment of the book?</li>
+                                    <li>How can we extract similarity between entities in the corpus?</li>
+                                    <li>For the last part, all kids who grew up in India have heard this story of how one of the main characters, Arjuna 
+                                        was exiled and how he travelled the subcontinent. I wanted to map the path they took over the years. How can we do that? </li>
+                                </ul>
+                            </p>
+                            <header>
+                                <h1>Who are the protagonists of this story?</h1>
+                            
+                            <p>
+                                For the first problem, it is probably the simplest one. In any book or fiction, the protagonists usually tend to be the most mentioned characters.
+                                And this corpus is no different. Using, a library like NLTK or Spacy, we can extract the Name entities of the corpus, the filter out the proper nouns tagged as
+                                "PERSONS" and find the most mentioned ones. Two of the main protagonists of this story were Arjuna and karna. They both were mentioned more  than 10,000 times in the 
+                                corpus. We can also, find the chapter level mentions of the characters and plot this data to see how relevant in the story line they were. Looking at the plot, looks
+                                like they fall of somewhere in the middle of the book. Wonder why? If you guessed they died, you are correct. 
+                                <span style="display:block; height: 25px;"></span>
+                                <img src="images\TM\namecount.png" width="75%" , class="center_small">
+
+                            </p>
+
+                            <p>Now how were our main characters? To do this, I counted the adjectives used to describe these two characters. Looks like they both are mighty and fierce, as all protagonists of 
+                                hero's journey stories. 
+                                <figure>
+                                    <img src="images/TM/wordcloudarjun.png" width=25%, class="center_small">
+                                    <figcaption class="figure-caption text-center">adjectives of Arjuna</figcaption>
+                                </figure>
+                             
+                                <figure>
+                                    <img src="images/TM/wordcloudkarna.png" width=25%, class="center_small">
+                                    <figcaption class="figure-caption text-center">adjectives of Karna</figcaption>
+                                </figure>
+                            </p>
+                        </header>
+                        <header>
+                            <h1>
+                                Sentiment of the corpus
+                            </h1>
+                        
+                            <p>
+                                Another interesting part is to see the overall sentiment of the story. How it begins, how it moves forward and how it ends. To compute the sentiment scores
+                                a library called TextBlob was used along with spacy. The positive sentiments had an accuracy of 68% whle negative intensity had 72%. Now lets plot the per chapter
+                                sentiment and see how the mood of the book flows. 
+                                <figure>
+                                    <img src="images/TM/sentiment.PNG" width=85%, class="center_small">
+                                    <figcaption class="figure-caption text-center">Sentiment analysis</figcaption>
+                                </figure>
+                                <span style="display:block; height: 25px;"></span>
+                                The book starts off on a high note and gradually decline over the chapter, in the middle chapters the war between the two families intensifes. And at around 11th chapter, the Two
+                                main characters die, and the sentiments takes a dive into the negative territory. Finally as the conflict resolves the curve moves back to the positive range.
+                                This is a over simplification offcourse, there might more reasons on isolation of the curve. Someone who understands the story might be able to
+                                give the correlations here.  
+                            </p>
+                        </header>
+                        <header>
+                            <h1>
+                                Relation between characters
+                            </h1>
+
+                        <p>
+                            Another interesting thing to study is to find the characters of the story and whom they are close with without reading the corpus.
+                            This can be done by visualizing the word embedding vectors by plotting them on a latent space. I first converted all the words from the corpus
+                            into a vectors using tf-idf and then the vectors were plotted with t-distributed Stochastic Neighbor Embedding or T-SNE. It is a tool to visualize
+                            high dimensional data by converting similarities between data points to joint probabilities. Lets visualize the entire corpus first,
+                            <figure>
+                                <img src="images/TM/T-snecorpus.png" width=25%, class="center_small">
+                                <figcaption class="figure-caption text-center">T-SNE for the entire corpus</figcaption>
+                            </figure>
+                            <span style="display:block; height: 25px;"></span>
+
+                            Well, that doesn't really convey much information. To make the data points more precise, one had to apply a dimensionality reduction algorithm like PCA.
+                            After, that since we are only looking for character relations, a filter of pronouns were applied to the corpus. Now lets take a look.
+                            <figure>
+                                <img src="images/TM/Tsnenouns.PNG" width=50%, class="center_small">
+                                <figcaption class="figure-caption text-center">T-SNE for the entire corpus</figcaption>
+                            </figure>
+                            <span style="display:block; height: 25px;"></span>
+                            Athough it isn't much clear in this picture since the scatter plot is in 3d space, we can infer anyway that the characters are seperated into factions
+                            or cluster of words which indicate their families. Now for the last bit of information I am intereste in,
+
+                        </p>
+                        </header>
+                        <header>
+                            <h1>Plotting the travels of the main character</h1>
+                        This was the most challenging part of the project. For this, the information needed are the the time and location pertained
+                        only Arjuna. To do this, I filtered all the sentenced that mentioned the character and sorted them according to their occurence in the corpus.
+                        The applying NER, verbs such as  "travelled towards", "walked", "ran" etc along with their supporting nouns were extracted. Then only the place and 
+                        noun pairs were used as the final data points. Finding corresponding locations in the modern world took some research on the internet and they latitute-longitude were 
+                        obtained. Then this was plotted on a map of india with QGIS and kapwing software. You proably have already seen the GIF from the thumbnail.
+                        but let' take a look at the result again.
+                        <figure>
+                            <img src="images/TM/path.gif" width=75%, class="center_small">
+                            <figcaption class="figure-caption text-center">Travel path information</figcaption>
+                        </figure>
+                        
+                        </header>
+
+                        <p>
+                            You have reached the end of the article. This project was interesting to me. As it was my early days of  machine learning and NLP, I learnt a lot 
+                            from this not only just data science but my skills for python programming as well. I hope you found the mined information interesing as well. If you are further interested, you
+                            can find the code for this in my github. Thank you and have a nice day.
+                        </p>
+                            </div>
