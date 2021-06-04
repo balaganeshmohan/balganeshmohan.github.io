@@ -27,7 +27,7 @@
                     <div class="post-container">
                         <a class="back" href="./index.html">Back to all posts</a>
 
-                        <h1><strong>Building a Chatbot to Assist Survivors of Sexual Harassment</h1></strong>
+                        <h1>Building a Chatbot to Assist Survivors of Sexual Harassment</h1>
 
                         <span class="by">Posted by <strong>Balaganesh</strong> on <strong>March, 2020</strong></span>
 
@@ -64,6 +64,7 @@
                             </p>
                             <header>
                                 <h1>Data</h1>
+                            </header>
                                 <p>
                                     Let's take a look at the data. The first sub task is to classify whether a input
                                     sentence from a user is related to harrasment or not. So it is treated
@@ -79,10 +80,10 @@
                                     frequent words from the dataset.
                                 </p>
                                 <img src="images\metoo\WC_harras_Verbs_1905.png" width="25%" , class="center_small">
-                            </header>
+                            
                             <header>
                                 <h1>Classification</h1>
-
+                            </header>
 
                                 <p>
                                     To summarize, the text classification block has to clasify the input into one of
@@ -114,10 +115,10 @@
 
                                 </div>
                                 </p>
-                            </header>
+                            
                             <header>
                                 <h1>Named Entity recognition</h1>
-
+                            </header>
                                 <p>
                                     Named entity recognition is the next subtask. NER is generally used to extract
                                     information such as person names, organizations, locations, medical codes, time
@@ -132,15 +133,18 @@
                                     
                                 </p>
                                 <img src="images/metoo/ner.PNG" width=50%>
-                            </header>
+                            
                             <header>
                                 <h1>Chatbot</h1>
+                            </header>
+                            <p>
                                 Now onto the final step of the pipeline, where all the different models are accumulated
                                 together and the chatbot acts like the medium for input and output data.
                                 Initially, we wanted to create our own chatbot from scratch using RASA framework, but
                                 given that it is a university project and there are time constraints,
                                 we settled to used the telegram wrapper where our models can be hosted locally and on
                                 the internet.
+                            </p>
                                 <p>
 
 
@@ -166,10 +170,11 @@
                                 designed by us looks like this.
                                 <span style="display:block; height: 25px;"></span>
                                 <img src="images/metoo/dialogue.png" width=50% class="center_medium">
-                            </header>
+                            
 
                             <header>
                                 <h1>Conclusion</h1>
+                            </header>
                                 <p>
                                     Classification of the harassment type was successful by reusing data from SafeCity
                                     and combining two models: a TF-IDF with up to 3 n-grams and
@@ -200,6 +205,6 @@
                                         href="https://sites.google.com/view/ecmlpkddsogood2019/awards?authuser=0">here.</a>
 
                                 </p>
-                            </header>
+                           
                             <span style="display:block; height: 50px;"></span>
                         </div>

@@ -55,7 +55,7 @@ body {
 	-webkit-text-size-adjust: none;
 }
 body {
-	background: linear-gradient(black,white);
+	background: linear-gradient(yellow,white);
 }
 
 mark {
@@ -89,21 +89,24 @@ input, select, textarea {
 		background: #fff;
 	}
 
+
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
 			-webkit-animation: none !important;
 			-ms-animation: none !important;
 			animation: none !important;
-			-moz-transition: none !important;
+			-moz-transition: none !important;	
 			-webkit-transition: none !important;
 			-ms-transition: none !important;
 			transition: none !important;
 		}
 
+	
+
 	body, input, select, textarea {
-		color: #a2a2a2;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 16pt;
+		color: #black;
+		font-family: "Helvetica";
+		font-size: 14pt;
 		font-weight: 400;
 		line-height: 1.75em;
 	}
@@ -120,12 +123,12 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #49bf9d !important;
+			color: #187459 !important;
 			text-decoration: none;
 		}
 
 	strong, b {
-		color: #787878;
+		color: #57e49d;
 		font-weight: 400;
 	}
 
@@ -137,9 +140,32 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	@font-face {
+		font-family: "Space Mono Bold";
+		src: url("assets\webfonts\SpaceMono-Bold.ttf") format("truetype");
+	}
+
+	@font-face {
+		font-family: "Space Mono Reg";
+		src: url("assets\webfonts\SpaceMono-Regular.ttf") format("truetype");
+	}
+
+	h1 { color: 0; ;font-family: 'Space Mono Bold', sans-serif; font-size: 275px; font-weight: bold;
+		 letter-spacing: -1px; line-height: 1; }
+
+	h2 { color: 0; font-family: 'pace Mono Reg', sans-serif; font-size: 30px; font-weight: 100; line-height: 32px; 
+			margin: 0 0 72px;  }
+
+	h3 { color: 0; font-family: 'pace Mono Reg', sans-serif; font-size: 10px; font-weight: 100; line-height: 10px; 
+				margin: 0 0 10px;  }
+
+	p { font-family: 'Space Mono Reg', sans-serif; color: #110404; font-size: 14px; }
+
+	ul { font-family: 'Space Mono Reg', sans-serif; color: #110404; font-size: 14px; }
+
+	h4, h5, h6 {
 		color: #787878;
-		font-weight: 400;
+		font-weight: 600;
 		line-height: 1em;
 		margin: 0 0 1em 0;
 	}
@@ -3029,7 +3055,7 @@ input, select, textarea {
 		/* Basic */
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 14pt;
 			}
 
 	}

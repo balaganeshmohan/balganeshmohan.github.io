@@ -11,10 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"> --> -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    
     <link href="assets/css/main.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    
 
 </head>
 
@@ -43,10 +42,10 @@
                                 epic involving a convoluted story of two families. The original iteration was written in sanskrit as far back as 9th century B.C. It was later translated to 
                                 English between 1883-1886. The original size of the text is roughly ten times larger than the Greek epics odyssey and iliad combined. Such a large
                                 corupus would be a golden playground to find interesting information and that is what I set out to do. This project is a part time activity for learning and 
-                                also for fun purpose. Let's dive in and take a look at the dimensions of the corpus.
+                                also for fun purpose. Let's dive in and take a look at the dimensions of the corpus. 
 
                             </p>
-                            <img src="images\TM\corpus.PNG" width="25%" , class="center_small">
+                            <img src="images\TM\corpus.png" width="25%" , class="center_small">
                             <span style="display:block; height: 25px;"></span>
                             <p>
                                 I wanted to find few of the important things from the books. One has to keep in mind that I have not read the corpus previously.
@@ -62,7 +61,7 @@
                             </p>
                             <header>
                                 <h1>Who are the protagonists of this story?</h1>
-                            
+                            </header>
                             <p>
                                 For the first problem, it is probably the simplest one. In any book or fiction, the protagonists usually tend to be the most mentioned characters.
                                 And this corpus is no different. Using, a library like NLTK or Spacy, we can extract the Name entities of the corpus, the filter out the proper nouns tagged as
@@ -70,7 +69,7 @@
                                 corpus. We can also, find the chapter level mentions of the characters and plot this data to see how relevant in the story line they were. Looking at the plot, looks
                                 like they fall of somewhere in the middle of the book. Wonder why? If you guessed they died, you are correct. 
                                 <span style="display:block; height: 25px;"></span>
-                                <img src="images\TM\namecount.PNG" width="75%" , class="center_small">
+                                <img src="images\TM\namecount.png" width="75%" , class="center_small">
 
                             </p>
 
@@ -86,11 +85,12 @@
                                     <figcaption class="figure-caption text-center">adjectives of Karna</figcaption>
                                 </figure>
                             </p>
-                        </header>
+                        
                         <header>
                             <h1>
                                 Sentiment of the corpus
                             </h1>
+                        </header>
                         
                             <p>
                                 Another interesting part is to see the overall sentiment of the story. How it begins, how it moves forward and how it ends. To compute the sentiment scores
@@ -100,18 +100,20 @@
                                     <img src="images/TM/sentiment.PNG" width=85%, class="center_small">
                                     <figcaption class="figure-caption text-center">Sentiment analysis</figcaption>
                                 </figure>
+                            </p>
+                            <p>
                                 <span style="display:block; height: 25px;"></span>
                                 The book starts off on a high note and gradually decline over the chapter, in the middle chapters the war between the two families intensifes. And at around 11th chapter, the Two
                                 main characters die, and the sentiments takes a dive into the negative territory. Finally as the conflict resolves the curve moves back to the positive range.
                                 This is a over simplification offcourse, there might more reasons on isolation of the curve. Someone who understands the story might be able to
                                 give the correlations here.  
+                            
                             </p>
-                        </header>
                         <header>
                             <h1>
                                 Relation between characters
                             </h1>
-
+                        </header>
                         <p>
                             Another interesting thing to study is to find the characters of the story and whom they are close with without reading the corpus.
                             This can be done by visualizing the word embedding vectors by plotting them on a latent space. I first converted all the words from the corpus
@@ -134,9 +136,11 @@
                             or cluster of words which indicate their families. Now for the last bit of information I am intereste in,
 
                         </p>
-                        </header>
+                        
                         <header>
                             <h1>Plotting the travels of the main character</h1>
+                        </header>
+                        <p>
                         This was the most challenging part of the project. For this, the information needed are the the time and location pertained
                         only Arjuna. To do this, I filtered all the sentenced that mentioned the character and sorted them according to their occurence in the corpus.
                         The applying NER, verbs such as  "travelled towards", "walked", "ran" etc along with their supporting nouns were extracted. Then only the place and 
@@ -148,7 +152,7 @@
                             <figcaption class="figure-caption text-center">Travel path information</figcaption>
                         </figure>
                         
-                        </header>
+                    </p>
 
                         <p>
                             You have reached the end of the article. This project was interesting to me. As it was my early days of  machine learning and NLP, I learnt a lot 
@@ -156,3 +160,4 @@
                             can find the code for this in my github. Thank you and have a nice day.
                         </p>
                             </div>
+                </html>

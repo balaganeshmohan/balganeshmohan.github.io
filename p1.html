@@ -65,11 +65,13 @@ It is only a matter of time before more complex problems, such as histopathology
                         <li>Training is much faster and memory efficient than training on the largest possible scale.</li>
                         <li>The performance is much better as we will see.</li>
                     </ul>
+                    <p>
                 The below image is a outlay of the pipeline used in this project. After experimenting with several architectures like ResNet, InceptionV3 etc.. DenseNet proved to 
                 be the best performing one. The inference to note here is that, the features of this dataset are particularly hard to learn and relatively shallow networks like ResNet 
                 suffers from vanishing gradients as the depth is increased in ranges of 50,101,121 etc.. But denseNet is immune to this as it is designed by making the gradients flow 
                 from any layer close to the loss function to any earlier layers, hence the resulting good performance. 
                     <img src="images/cancer-images/arch.png" width=100% class="center_small">
+                  </p>
                 </p>
                     
                     
