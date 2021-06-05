@@ -29,10 +29,10 @@
                         <h1><strong>Mining books for information</h1></strong>
 
                         <span class="by">Posted by <strong>Balaganesh</strong> on <strong>March, 2020</strong>. 5-7 min read</span>
-
+                        <span style="display:block; height: 25px;"></span>
                         <div class="featured-image">
                             <img src="https://www.youngisthan.in/wp-content/uploads/2018/11/title-pic-4-970x546.jpg"
-                                width="50%" , class="center_large">
+                                width="50%" , class="center_medium">
                         </div>
                         <span style="display:block; height: 25px;"></span>
                         <div class="post-body">
@@ -45,7 +45,7 @@
                                 also for fun purpose. Let's dive in and take a look at the dimensions of the corpus. 
 
                             </p>
-                            <img src="images\TM\corpus.png" width="25%" , class="center_small">
+                            <img src="images\TM\corpus.PNG" width="25%" , class="center_small">
                             <span style="display:block; height: 25px;"></span>
                             <p>
                                 I wanted to find few of the important things from the books. One has to keep in mind that I have not read the corpus previously.
@@ -69,7 +69,7 @@
                                 corpus. We can also, find the chapter level mentions of the characters and plot this data to see how relevant in the story line they were. Looking at the plot, looks
                                 like they fall of somewhere in the middle of the book. Wonder why? If you guessed they died, you are correct. 
                                 <span style="display:block; height: 25px;"></span>
-                                <img src="images\TM\namecount.png" width="75%" , class="center_small">
+                                <img src="images\TM\namecount.PNG" width="75%" , class="center_large">
 
                             </p>
 
@@ -77,12 +77,12 @@
                                 hero's journey stories. 
                                 <figure>
                                     <img src="images/TM/wordcloudarjun.png" width=25%, class="center_small">
-                                    <figcaption class="figure-caption text-center">adjectives of Arjuna</figcaption>
+                                    
                                 </figure>
                              
                                 <figure>
                                     <img src="images/TM/wordcloudkarna.png" width=25%, class="center_small">
-                                    <figcaption class="figure-caption text-center">adjectives of Karna</figcaption>
+                                    
                                 </figure>
                             </p>
                         
@@ -97,15 +97,16 @@
                                 a library called TextBlob was used along with spacy. The positive sentiments had an accuracy of 68% whle negative intensity had 72%. Now lets plot the per chapter
                                 sentiment and see how the mood of the book flows. 
                                 <figure>
-                                    <img src="images/TM/sentiment.PNG" width=85%, class="center_small">
-                                    <figcaption class="figure-caption text-center">Sentiment analysis</figcaption>
+                                    <img src="images/TM/sentiment.PNG" width=85%, class="center_large">
+                                    
                                 </figure>
                             </p>
                             <p>
                                 <span style="display:block; height: 25px;"></span>
                                 The book starts off on a high note and gradually decline over the chapter, in the middle chapters the war between the two families intensifes. And at around 11th chapter, the Two
-                                main characters die, and the sentiments takes a dive into the negative territory. Finally as the conflict resolves the curve moves back to the positive range.
-                                This is a over simplification offcourse, there might more reasons on isolation of the curve. Someone who understands the story might be able to
+                                main characters die, and the sentiments takes a dive into the negative territory. Finally as the conflict resolves the curve moves back to the positive range and then it drops again
+                                around chapter 18, this is because another main character called 'Krishna' dies in the story.
+                                This is a over simplification offcourse, there might more intricate reasons on twisting of the curve in every chapter. Someone who understands the story might be able to
                                 give the correlations here.  
                             
                             </p>
@@ -117,23 +118,26 @@
                         <p>
                             Another interesting thing to study is to find the characters of the story and whom they are close with without reading the corpus.
                             This can be done by visualizing the word embedding vectors by plotting them on a latent space. I first converted all the words from the corpus
-                            into a vectors using tf-idf and then the vectors were plotted with t-distributed Stochastic Neighbor Embedding or T-SNE. It is a tool to visualize
-                            high dimensional data by converting similarities between data points to joint probabilities. Lets visualize the entire corpus first,
+                            into a vectors using tf-idf and then the vectors were plotted with t-distributed Stochastic Neighbor Embedding or t-SNE. t-SNE is a non linear dimensionality
+                            reduction technique that is particularly useful to visualize high dimensional vectors in 3D space by converting similarities between data points to joint probabilities.
+                            Along with similar techniques like PCA, it is extensively used in NLP for visualization purposes. Now let's take a look at how our corpus looks like in a 3d space. 
                             <figure>
                                 <img src="images/TM/T-snecorpus.png" width=25%, class="center_small">
-                                <figcaption class="figure-caption text-center">T-SNE for the entire corpus</figcaption>
+                                
                             </figure>
                             <span style="display:block; height: 25px;"></span>
-
-                            Well, that doesn't really convey much information. To make the data points more precise, one had to apply a dimensionality reduction algorithm like PCA.
-                            After, that since we are only looking for character relations, a filter of pronouns were applied to the corpus. Now lets take a look.
+                        </p>
+                        <p>
+                            Well, that doesn't really convey much information. To make the data points more precise and that since we are only looking for character relations,
+                             a filter of pronouns were applied to the corpus before visualization. Now lets take a look.
                             <figure>
-                                <img src="images/TM/Tsnenouns.PNG" width=50%, class="center_small">
-                                <figcaption class="figure-caption text-center">T-SNE for the entire corpus</figcaption>
+                                <img src="images/TM/Tsnenouns.PNG" width=50%, class="center_medium">
+                                
                             </figure>
+                        </p>
                             <span style="display:block; height: 25px;"></span>
-                            Athough it isn't much clear in this picture since the scatter plot is in 3d space, we can infer anyway that the characters are seperated into factions
-                            or cluster of words which indicate their families. Now for the last bit of information I am intereste in,
+                            <p>Athough we cannot see in detail the features represented in this 2D picture since the scatter plot is in 3D space, we can infer anyway that the characters are seperated into factions
+                            or cluster of words which indicate their families or relations with their story counterparts. It's pretty cool that we can mathematically infer the details of the world without reading about it.
 
                         </p>
                         
@@ -148,16 +152,16 @@
                         obtained. Then this was plotted on a map of india with QGIS and kapwing software. You proably have already seen the GIF from the thumbnail.
                         but let' take a look at the result again.
                         <figure>
-                            <img src="images/TM/path.gif" width=75%, class="center_small">
-                            <figcaption class="figure-caption text-center">Travel path information</figcaption>
+                            <img src="images/TM/path.gif" width=75%, class="center_large">
+                            
                         </figure>
                         
                     </p>
 
                         <p>
-                            You have reached the end of the article. This project was interesting to me. As it was my early days of  machine learning and NLP, I learnt a lot 
-                            from this not only just data science but my skills for python programming as well. I hope you found the mined information interesing as well. If you are further interested, you
-                            can find the code for this in my github. Thank you and have a nice day.
+                            You have reached the end of the article. This project was interesting to me. As it was my early days of learning data science and NLP in particular, I learnt a lot 
+                            about word embeddings, word processing libraries like NLTK and how to visualize the mathematical part of textual data. I hope you found the mined information interesing as well. If you are further interested, you
+                            can find the code for this project in my github. Thank you and have a cookie.
                         </p>
                             </div>
                 </html>

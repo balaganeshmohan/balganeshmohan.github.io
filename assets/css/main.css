@@ -86,7 +86,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #fff;
+		background: #fff
 	}
 
 
@@ -123,12 +123,12 @@ input, select, textarea {
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #187459 !important;
+			color: #ffc900 !important;
 			text-decoration: none;
 		}
 
 	strong, b {
-		color: #57e49d;
+		color: #000;
 		font-weight: 400;
 	}
 
@@ -150,20 +150,28 @@ input, select, textarea {
 		src: url("assets\webfonts\SpaceMono-Regular.ttf") format("truetype");
 	}
 
-	h1 { color: 0; ;font-family: 'Space Mono Bold', sans-serif; font-size: 275px; font-weight: bold;
+	@font-face {
+		font-family: "Space Mono It";
+		src: url("assets\webfonts\SpaceMono-Italic.ttf") format("truetype");
+	}
+
+	h1 { color: 0; font-family: 'Space Mono Bold', sans-serif; font-size: 40px; font-weight: bold;
 		 letter-spacing: -1px; line-height: 1; }
 
-	h2 { color: 0; font-family: 'pace Mono Reg', sans-serif; font-size: 30px; font-weight: 100; line-height: 32px; 
+	h2 { color: 0; font-family: 'Space Mono Reg', sans-serif; font-size: 30px; font-weight: 100; line-height: 32px; 
 			 }
 
-	h3 { color: 0; font-family: 'pace Mono Reg', sans-serif; font-size: 10px; font-weight: 100; line-height: 10px; 
+	h3 { color: 0; font-family: 'Space Mono Reg', sans-serif; font-size: 20px; font-weight: 100; line-height: 32px; 
 				margin: 0 0 10px;  }
 
-	p { font-family: 'Space Mono Reg', sans-serif; color: #110404; font-size: 14px; }
+
+	h4 { color: #9a9697; font-family: 'Space Mono It', sans-serif; font-size: 15px; font-weight: 10; line-height: 2; 
+				margin: 0 0 5px;  }
+	p { font-family: 'Space Mono Reg', sans-serif; color: #110404; font-size: 15px; font-weight: 20; }
 
 	ul { font-family: 'Space Mono Reg', sans-serif; color: #110404; font-size: 14px; }
 
-	h4, h5, h6 {
+	 h5, h6 {
 		color: #787878;
 		font-weight: 600;
 		line-height: 1em;
@@ -175,25 +183,8 @@ input, select, textarea {
 			text-decoration: none;
 		}
 
-	h1 {
-		font-size: 2em;
-		line-height: 1.5em;
-	}
+	
 
-	h2 {
-		font-size: 1.5em;
-		line-height: 1.5em;
-	}
-
-	h3 {
-		font-size: 1.25em;
-		line-height: 1.5em;
-	}
-
-	h4 {
-		font-size: 1.1em;
-		line-height: 1.5em;
-	}
 
 	h5 {
 		font-size: 0.9em;
@@ -2134,7 +2125,7 @@ input, select, textarea {
 			}
 
 			.image.thumb:hover:after {
-				opacity: 1.0;
+				opacity: 2.0;
 			}
 
 			.image.thumb:hover:before {
@@ -2207,8 +2198,15 @@ input, select, textarea {
 	margin-left: auto;
 	margin-right: auto;
 	width: 50%;
-  }		
-  .center_large {
+  }	
+  
+  .center_large{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+  }	
+  .center_Xlarge {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -2663,9 +2661,9 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #1f1815;
+		background-color:  #ffc900; background-image: linear-gradient(315deg, #ffc900 0%, #ffc900 74%);
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		/* background-image: url("images/overlay.png"), url("	"); */
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
@@ -2696,15 +2694,15 @@ input, select, textarea {
 		}
 
 		#header strong, #header b {
-			color: #ffffff;
+			color: #0c0b0b;
 		}
 
 		#header h2, #header h3, #header h4, #header h5, #header h6 {
-			color: #ffffff;
+			color: #0e0d0d;
 		}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(12, 2, 2, 0.979);
 			font-size: 1.35em;
 			line-height: 1.75em;
 			margin: 0;
@@ -2722,7 +2720,7 @@ input, select, textarea {
 	}
 
 		#footer .icons a {
-			color: rgba(255, 255, 255, 0.4);
+			color: rgba(15, 9, 9, 0.979);
 		}
 
 	#footer .copyright {
@@ -2761,7 +2759,7 @@ input, select, textarea {
 	}
 
 		#main > section {
-			border-top: solid 2px #efefef;
+			border-top: solid 1px #ffc900;
 			margin: 4em 0 0 0;
 			padding: 4em 0 0 0;
 		}

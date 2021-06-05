@@ -25,15 +25,16 @@
             <div class="post-container">
               <a class="back" href="./index.html">Back to all posts</a>
 
-              <h1><strong>Identifying Mutation in Colorectal Cancer Cells</h1></strong>
+              <h1>Identifying Mutation in Colorectal Cancer Cells</h1>
 
-              <span class="by">Posted by <strong>Balaganesh</strong> on <strong>March, 2021</strong></span>
-
+              <span class="by">Posted by <strong>Balaganesh</strong> on <strong>March, 2021</strong>,6-8 min read</span>
+              <span style="display:block; height: 25px;"></span>
               <div class="featured-image">
                 <img src="https://downloads.healthcatalyst.com/wp-content/uploads/2017/04/machine-learning-in-healthcare.jpg" width="25%", class="center_small">
               </div>
-
+              
               <div class="post-body">
+                <span style="display:block; height: 25px;"></span>
                 <p>Machine learning has the potential to revolutionize the healthcare industry.
                 Although it is still in its early stages, machine learning is proving to be extremely useful especially in the diagnostics department. 
                 Several machine learning models were capable of defeating Stanford University radiologists in a competition designed by the Stanford Machine Learning group within the last decade.
@@ -50,6 +51,7 @@ It is only a matter of time before more complex problems, such as histopathology
                 </p>
                
                     <img src="images/cancer-images/data.png" width="25%" class="center_small">
+                    <span style="display:block; height: 25px;"></span>
                 <p>
                     This is a binary image classification problem. So, let's use the sultan of computer vision, the CNN's. Convolutional neural networks are great
                     at image recognition, but they have one major problem. Scale invariance. This is an even bigger problem in histopathological image recognition because,
@@ -70,8 +72,10 @@ It is only a matter of time before more complex problems, such as histopathology
                 be the best performing one. The inference to note here is that, the features of this dataset are particularly hard to learn and relatively shallow networks like ResNet 
                 suffers from vanishing gradients as the depth is increased in ranges of 50,101,121 etc.. But denseNet is immune to this as it is designed by making the gradients flow 
                 from any layer close to the loss function to any earlier layers, hence the resulting good performance. 
-                    <img src="images/cancer-images/arch.png" width=100% class="center_small">
+                <span style="display:block; height: 25px;"></span>
+                    <img src="images/cancer-images/arch.png" width=100% class="center_large">
                   </p>
+                  <span style="display:block; height: 25px;"></span>
                 </p>
                     
                     
@@ -87,10 +91,10 @@ It is only a matter of time before more complex problems, such as histopathology
 
                     <div class="img_row">
                         <div class="img_column">
-                            <img src="images/cancer-images/auc_patient.png" class="center_medium">
+                            <img src="images/cancer-images/auc_patient.png" class="center_large">
                         </div>
                         <div class="img_column">
-                            <img src="images/cancer-images/patient_final.png" class="center_medium">
+                            <img src="images/cancer-images/patient_final.png" class="center_large">
                         </div>
                         
                       </div> 
@@ -103,16 +107,16 @@ It is only a matter of time before more complex problems, such as histopathology
                     Now lets viualize some intersting findings from our best performing model. One of the visualization I find interesting is the class activation mapping. It can highlight the features of the image 
                     the model looks at to make a prediction. In our case, it is even better because it exactly points out which region in the spatial coordinates of the tumor, the mutation has occcured. What I inferred from this 
                     image is that the concentric circles are somewhow correlated. I cannot confirm as I am not an expert in histopathology but someone whos is might be able to. 
-                    
-                    <img src="images/cancer-images/grad-cam.png" class="center_micro" width="500" height="500">
+                    <span style="display:block; height: 25px;"></span>
+                    <img src="images/cancer-images/grad-cam.png" class="center_medium">
                 </p>
                 <p>
                     Now lets try to plot the region of mutation occurence in the patient level image. I wanted to see if there are any patterns in the occurence of the mutation by
                     plotting the images based on their original coordinates before cut, and classifying based on the result. However, there were no underlying patterns present here,
                     maybe a larger sample size and a clustering algorithm like KNN's might be able to identify the possible patterns. 
-                    <img src="images/cancer-images/nonmsih_2.PNG" class="center_small">
-                    <img src="images/cancer-images/msih_1.PNG" class="center_micro">
-                    <img src="images/cancer-images/msih_2.PNG" class="center_micro">
+                    <img src="images/cancer-images/nonmsih_2.PNG" class="center_medium">
+                    <img src="images/cancer-images/msih_1.PNG" class="center_medium">
+                    <img src="images/cancer-images/msih_2.PNG" class="center_medium">
                     
                 </p>
 
