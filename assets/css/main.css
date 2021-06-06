@@ -54,9 +54,7 @@ table {
 body {
 	-webkit-text-size-adjust: none;
 }
-body {
-	background: linear-gradient(yellow,white);
-}
+
 
 mark {
 	background-color: transparent;
@@ -1956,7 +1954,7 @@ input, select, textarea {
 
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
-				background: #f7f7f7;
+				background: #f8f8f8;
 				border-radius: 0.35em;
 				border: solid 2px transparent;
 				content: '';
@@ -2301,7 +2299,7 @@ input, select, textarea {
 			}
 
 			ul.labeled-icons li h3 {
-				color: #b2b2b2;
+				color: #000000;
 				left: 0;
 				position: absolute;
 				text-align: center;
@@ -2713,6 +2711,10 @@ input, select, textarea {
 			width: 6.25em;
 		}
 
+	
+
+
+
 /* Footer */
 
 	#footer .icons {
@@ -2724,7 +2726,7 @@ input, select, textarea {
 		}
 
 	#footer .copyright {
-		color: rgba(255, 255, 255, 0.4);
+		color: rgb(5, 1, 1);
 		font-size: 0.8em;
 		list-style: none;
 		margin: 1em 0 0 0;
