@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <title>Impression art with math</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    
+    <link href="assets/css/main.css" rel="stylesheet">
+    
+
+</head>
+
+<body>
+
+    <div class="section-blog-post">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="post-container">
+                        <a class="back" href="./index.html">Back to all posts</a>
+
+                        <h1>Impression art with math</h1>
+
+                        <span class="by">Posted by <strong>Balaganesh</strong> on <strong>June, 2020,</strong> 2-3 min read</span>
+                        <span style="display:block; height: 25px;"></span>
+                        <div class="featured-image">
+                            <img src="images/distance-art/impression.jpg"
+                                width="50%" , class="center_medium">
+                        </div>
+                        <span style="display:block; height: 25px;"></span>
+                        <div class="post-body">
+                            <p>
+                                They say there is no such thing as bad art they say, yet I am well aware that my artwork is bad.
+
+                                For the life of me, I can't draw.
+                                But what I can is do math and turn that arithmetic magic into something... well, let's just call it pleasing. 
+                                Digital art is not a new concept.
+                                Since the invention of transistors, people have been creative with it.
+                                Very recently GANs, or Generative Adversial Networks with the power of computer vision, have produced 
+                                artistically beautiful results like style transfer, deep dream and many more.
+                                This post, on the other hand, is not overly difficult.
+                                We may experiment with simple mathematical functions like calculating the distance between two pixels in an existing image and then superimposing the new value over a mask image 
+                                and hope it looks nice to see. 
+                                
+                            </p>
+
+                            <p>
+                                It is fairly straightforward to compute the distance between two scalar coordinates.
+                                    Simply enter the coordinates into a function to obtain the output.
+                                However, calculating the distance between two pixels might be difficult.
+                            My method was to construct a mask array with the same size as the original image, then calculate the distance between the two arrays for each pixel coordinate.
+                            But since we only need one coordinate, I took the argmin of this and called the pixel value of this new location at the old image, then applied it to the new mask picture.
+                            The distance can be determined using any of the well-known machine learning distance metrics.
+                            Eucledian, Chebyshev, and Minkowski were all used. 
+                            </p>
+
+                            <header>
+                                <h1> Eucledian distance</h1>
+                            </header>
+                            <span style="display:block; height: 25px;"></span>
+                            <p>
+                                
+
+                                From an non expert point of view, it looks like a oil painting with a digital brush. Maybe other distance parameters might
+                                change the style of the image. Let's see. 
+                                <img src="images/distance-art/eucledian.png" width="50%" , class="center_large">
+                            </p>
+
+                            <header>
+                                <h1> Chebyshev distance</h1>
+                            </header>
+                            <span style="display:block; height: 25px;"></span>
+                            <p>
+                                Looks like the result for Eucledian and Chebyshev are not that much different.  
+                                <img src="images/distance-art/chebyshev.png" width="50%" , class="center_large">
+                            </p>
+
+                            <header>
+                                <h1> Minkowski distance</h1>
+                            </header>
+
+                            <p>
+                                This one is my favourite.
+                                <img src="images/distance-art/minkowski.png" width="50%" , class="center_large">
+                            </p>
+
+                            <p>
+                                Thank you for reading this article. This was a hobby project of mine done within a day during my free time. The resultant
+                                images were certainly interesting from the fact that some simple mathematical functions
+                                can create something beautiful. The output is not limited to these three distance parameters but can be easily adapted to other 
+                                ones like for eg, Manhattan, Hamming distance etc.. I hope you liked it. If you want to create your own dank art, visit the notebook and 
+                                play around with the parameters <a
+                                href="https://colab.research.google.com/drive/1h4LblzgLNPqe7ycZhqSK6h2rX5IXHik9?usp=sharing">here.</a>
+                            </p>
