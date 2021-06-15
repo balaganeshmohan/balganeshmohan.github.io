@@ -37,17 +37,17 @@
                         <span style="display:block; height: 25px;"></span>
                         <div class="post-body">
                             <p>
-                                They say there is no such thing as bad art they say, yet I am well aware that my artwork is bad.
+                                They say there is no such thing as bad art, yet I am very well aware that my artwork is lousy.
 
                                 For the life of me, I can't draw.
-                                But what I can is do math and turn that arithmetic magic into something... well, let's just call it pleasing. 
-                                Digital art is not a new concept.
-                                Since the invention of transistors, people have been creative with it.
-                                Very recently GANs, or Generative Adversial Networks with the power of computer vision, have produced 
+                                But what I can do is math and turn that arithmetic magic into something... well, let's just call it pleasing. 
+                                Digital art is definitely not a new concept.
+                                Since the invention of transistors, people have been doing creative artwork with the technology.
+                                Very recently in terms of artifical intelligence, GANs, or Generative Adversial Networks with the power of computer vision, have produced 
                                 artistically beautiful results like style transfer, deep dream and many more.
-                                This post, on the other hand, is not overly difficult.
-                                We may experiment with simple mathematical functions like calculating the distance between two pixels in an existing image and then superimposing the new value over a mask image 
-                                and hope it looks nice to see. 
+                                This post, on the other hand, is not overly complicated.
+                                We will experiment with simple mathematical functions like calculating the distance between two pixels in an existing image and then superimposing 
+                                the new value over a mask image and hope it looks nice to see. 
                                 
                             </p>
 
@@ -56,9 +56,10 @@
                                     Simply enter the coordinates into a function to obtain the output.
                                 However, calculating the distance between two pixels might be difficult.
                             My method was to construct a mask array with the same size as the original image, then calculate the distance between the two arrays for each pixel coordinate.
-                            But since we only need one coordinate, I took the argmin of this and called the pixel value of this new location at the old image, then applied it to the new mask picture.
-                            The distance can be determined using any of the well-known machine learning distance metrics.
-                            Eucledian, Chebyshev, and Minkowski were all used. 
+                            But since we only need one coordinate, I used the argmin fucntion to get the indices of the minumum value of the matrix and called the pixel value of this new location at 
+                            the old image, then applied it to the new mask picture.
+                            The distance can be determined using any of the well-known machine learning distance metrics like
+                            Eucledian, Chebyshev, and Minkowski that were all used in this experiment. 
                             </p>
 
                             <header>
@@ -68,7 +69,7 @@
                             <p>
                                 
 
-                                From an non expert point of view, it looks like a oil painting with a digital brush. Maybe other distance parameters might
+                                From an non artist point of view, it looks like a oil painting with a digital brush. Maybe other distance functions might
                                 change the style of the image. Let's see. 
                                 <img src="images/distance-art/eucledian.png" width="50%" , class="center_large">
                             </p>
@@ -90,9 +91,21 @@
                                 This one is my favourite.
                                 <img src="images/distance-art/minkowski.png" width="50%" , class="center_large">
                             </p>
-
+                            <header>
+                                <h1>What about videos? </h1>
+                            </header>
                             <p>
-                                Thank you for reading this article. This was a hobby project of mine done within a day during my free time. The resultant
+
+                            
+                            Videos are esentially just image frames stacked in a sequence. We can apply the same function to all the frames and 
+                            get a nice looking video. Let's take a look at the example,
+                            
+                            <img src="images/distance-art/dist.gif" width="50%" , class="center_medium">
+
+                            </p>
+                            <p>
+                                Thank you for reading this article. This was a hobby project of mine done within a day during my free time. All input images
+                                were obtained from Unsplash or Giphy. The resultant
                                 images were certainly interesting from the fact that some simple mathematical functions
                                 can create something beautiful. The output is not limited to these three distance parameters but can be easily adapted to other 
                                 ones like for eg, Manhattan, Hamming distance etc.. I hope you liked it. If you want to create your own dank art, visit the notebook and 
