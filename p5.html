@@ -59,8 +59,11 @@
                             But since we only need one coordinate, I used the argmin fucntion to get the indices of the minumum value of the matrix and called the pixel value of this new location at 
                             the old image, then applied it to the new mask picture.
                             The distance can be determined using any of the well-known machine learning distance metrics like
-                            Eucledian, Chebyshev, and Minkowski that were all used in this experiment. 
+                            Eucledian, Chebyshev, and Minkowski that were all used in this experiment. Let's take a look at the code. The function 'distance' takes 
+                            as input the filepath to an image and the type of distance function to apply and will return a RGB image that can be displayed using 
+                            any image library. 
                             </p>
+                            <script src="https://gist.github.com/balaganeshmohan/3a8a710d24a63f53ab4cff0cc109b06d.js" type=""></script>
 
                             <header>
                                 <h1> Eucledian distance</h1>
@@ -106,8 +109,7 @@
                             <p>
                                 Thank you for reading this article. This was a hobby project of mine done within a day during my free time. All input images
                                 were obtained from Unsplash or Giphy. The resultant
-                                images were certainly interesting from the fact that some simple mathematical functions
-                                can create something beautiful. The output is not limited to these three distance parameters but can be easily adapted to other 
+                                images were certainly interesting. The output is not limited to these three distance parameters but can be easily adapted to other 
                                 ones like for eg, Manhattan, Hamming distance etc.. I hope you liked it. If you want to create your own dank art, visit the notebook and 
                                 play around with the parameters <a
                                 href="https://colab.research.google.com/drive/1h4LblzgLNPqe7ycZhqSK6h2rX5IXHik9?usp=sharing">here.</a>
